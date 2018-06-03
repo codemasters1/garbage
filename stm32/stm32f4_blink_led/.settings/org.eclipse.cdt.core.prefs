@@ -1,6 +1,0 @@
-eclipse.preferences.version=1
-environment/project/ilg.gnuarmeclipse.managedbuild.cross.toolchain.base.1136069646/PATH/delimiter=;
-environment/project/ilg.gnuarmeclipse.managedbuild.cross.toolchain.base.1136069646/PATH/operation=replace
-environment/project/ilg.gnuarmeclipse.managedbuild.cross.toolchain.base.1136069646/PATH/value=I\:\\arm\\toolchains\\gcc-arm-none-eabi-4_8-131228\\bin;C\:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C\:\\Windows\\system32;C\:\\Windows;C\:\\Windows\\System32\\Wbem;C\:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C\:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C\:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C\:\\Program Files\\TortoiseSVN\\bin;C\:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin;C\:\\Program Files (x86)\\Nmap;I\:\\dev\\coreutils
-environment/project/ilg.gnuarmeclipse.managedbuild.cross.toolchain.base.1136069646/append=true
-environment/project/ilg.gnuarmeclipse.managedbuild.cross.toolchain.base.1136069646/appendContributed=true

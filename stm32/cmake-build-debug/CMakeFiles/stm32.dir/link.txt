@@ -1,3 +1,0 @@
-C:\Users\Host\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\171.3780.121\bin\cmake\bin\cmake.exe -E remove -f CMakeFiles\stm32.dir/objects.a
-C:\DEV\MinGW\mingw64\bin\ar.exe cr CMakeFiles\stm32.dir/objects.a @CMakeFiles\stm32.dir\objects1.rsp
-C:\DEV\MinGW\mingw64\bin\gcc.exe  -g   -Wl,--whole-archive CMakeFiles\stm32.dir/objects.a -Wl,--no-whole-archive  -o stm32.exe -Wl,--out-implib,libstm32.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\stm32.dir\linklibs.rsp
