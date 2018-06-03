@@ -1,0 +1,46 @@
+module Ws2812Driver(
+  input clk_400k,
+  input start,
+  input [7:0] r,
+  input [7:0] g,
+  input [7:0] b,
+  output dout
+);
+  reg q = 0;
+  reg [6:0] state = 7'd75;
+  reg [23:0] data;
+  assign dout = q;
+    
+  always @(posedge clk_400k)
+    begin
+      if (state == 7'd75 & start)
+        begin
+          data <= {r, g, b};
+          state <= 0;
+        end
+	
+      if (state == 7'd72 || state == 7'd73 || state == 7'd74)
+        begin
+          q <= 0;
+        end
+      else if (state == 7'd75)
+          ; // ignore
+      else if (state % 3 == 0)
+        begin
+          q <= 1;
+        end
+      else if (state != 127 && state % 3 == 1)
+        begin
+          q <= data[23];
+        end
+      else if (state % 3 == 2)
+        begin
+          data <= (data << 1);
+          q <= 0;
+        end
+      
+      if (state != 7'd75)
+      	state <= (state + 1) % 76;
+    end
+endmodule
+  

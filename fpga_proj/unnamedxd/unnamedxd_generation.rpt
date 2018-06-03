@@ -1,0 +1,29 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\fpga_proj\unnamedxd.qsys --block-symbol-file --output-directory=C:\fpga_proj\unnamedxd --family="MAX 10" --part=10M08DAF256C8GES
+Progress: Loading fpga_proj/unnamedxd.qsys
+Progress: Reading input file
+Progress: Adding character_lcd_0 [altera_up_avalon_character_lcd 17.0]
+Progress: Parameterizing module character_lcd_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\fpga_proj\unnamedxd.qsys --synthesis=VERILOG --output-directory=C:\fpga_proj\unnamedxd\synthesis --family="MAX 10" --part=10M08DAF256C8GES
+Progress: Loading fpga_proj/unnamedxd.qsys
+Progress: Reading input file
+Progress: Adding character_lcd_0 [altera_up_avalon_character_lcd 17.0]
+Progress: Parameterizing module character_lcd_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: unnamedxd: Generating unnamedxd "unnamedxd" for QUARTUS_SYNTH
+Info: character_lcd_0: Starting Generation of Character LCD
+Info: character_lcd_0: "unnamedxd" instantiated altera_up_avalon_character_lcd "character_lcd_0"
+Info: unnamedxd: Done "unnamedxd" with 2 modules, 4 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

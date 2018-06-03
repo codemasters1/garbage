@@ -1,0 +1,48 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\fpga_proj\unnamed.qsys --block-symbol-file --output-directory=C:\fpga_proj\unnamed --family="MAX 10" --part=10M08DAF256C8GES
+Progress: Loading fpga_proj/unnamed.qsys
+Progress: Reading input file
+Progress: Adding fft_ii_0 [altera_fft_ii 17.0]
+Progress: Parameterizing module fft_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: unnamed.fft_ii_0: Radix-4 digit reverse implied
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\fpga_proj\unnamed.qsys --synthesis=VERILOG --output-directory=C:\fpga_proj\unnamed\synthesis --family="MAX 10" --part=10M08DAF256C8GES
+Progress: Loading fpga_proj/unnamed.qsys
+Progress: Reading input file
+Progress: Adding fft_ii_0 [altera_fft_ii 17.0]
+Progress: Parameterizing module fft_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: unnamed.fft_ii_0: Radix-4 digit reverse implied
+Info: unnamed: Generating unnamed "unnamed" for QUARTUS_SYNTH
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twifp5.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twrfp4.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twrfp5.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twifp6.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twrfp6.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twqfp1.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twqfp2.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twqfp3.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twqfp4.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twqfp5.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twqfp6.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twifp1.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twifp2.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twrfp1.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twifp3.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twrfp2.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twifp4.hex
+Info: fft_ii_0: --- add file: unnamed_fft_ii_0_twrfp3.hex
+Info: fft_ii_0: "unnamed" instantiated altera_fft_ii "fft_ii_0"
+Info: unnamed: Done "unnamed" with 2 modules, 76 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

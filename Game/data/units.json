@@ -1,0 +1,42 @@
+[
+	{
+		"name": "spear",
+		"kind": "infantry",
+		"population": 1,
+		"speed": 18,
+		"carry": 25,
+		"costs": { "wood": 50, "stone": 30, "iron": 10 },
+		"attack": 10,
+		"defense": 15,
+		"defense_against": [
+			{ "against": "infantry", "value": 10 },
+			{ "against": "cavalry", "value": 45 }
+		]
+	},
+	{
+		"name": "sword",
+		"kind": "infantry",
+		"population": 1,
+		"speed": 22,
+		"carry": 0,
+		"costs": { "wood": 30, "stone": 30, "iron": 70 },
+		"attack": 25,
+		"defense": 50,
+		"defense_against": [
+			{ "against": "cavalry", "value": 15 }
+		]
+	},
+	{
+		"name": "axe",
+		"kind": "infantry",
+		"population": 1,
+		"speed": 18,
+		"carry": 10,
+		"costs": { "wood": 10, "stone": 30, "iron": 70 },
+		"attack": 40,
+		"defense": 10,
+		"defense_against": [
+			{ "against": "spear", "value": 30 }
+		]
+	}
+]

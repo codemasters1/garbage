@@ -1,0 +1,4 @@
+EXPORTS
+  Load
+  Unload
+  AQQPluginInfo

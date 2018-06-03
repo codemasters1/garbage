@@ -1,0 +1,354 @@
+
+obj/bin/main.elf:     file format elf32-littlearm
+obj/bin/main.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x080001e5
+
+Program Header:
+    LOAD off    0x00010000 vaddr 0x08000000 paddr 0x08000000 align 2**16
+         filesz 0x0000177c memsz 0x0000177c flags r-x
+    LOAD off    0x00020200 vaddr 0x20000200 paddr 0x0800177c align 2**16
+         filesz 0x0000000c memsz 0x0000000c flags rw-
+    LOAD off    0x00030000 vaddr 0x20000000 paddr 0x20000000 align 2**16
+         filesz 0x00000000 memsz 0x000013b0 flags rw-
+private flags = 5000402: [Version5 EABI] [hard-float ABI] [has entry point]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000177c  08000000  08000000  00010000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .stack        00000200  20000000  20000000  00030000  2**0
+                  ALLOC
+  2 .data         0000000c  20000200  0800177c  00020200  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .bss          000011a4  2000020c  2000020c  00030000  2**2
+                  ALLOC
+  4 .aux          00000000  2001c000  2001c000  0002020c  2**0
+                  CONTENTS
+  5 .debug_aranges 00000778  00000000  00000000  00020210  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000902d  00000000  00000000  00020988  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000021be  00000000  00000000  000299b5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000053ac  00000000  00000000  0002bb73  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000015dc  00000000  00000000  00030f20  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0004ba3a  00000000  00000000  000324fc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00001806  00000000  00000000  0007df36  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .comment      0000006a  00000000  00000000  0007f73c  2**0
+                  CONTENTS, READONLY
+ 13 .ARM.attributes 00000030  00000000  00000000  0007f7a6  2**0
+                  CONTENTS, READONLY
+ 14 .debug_ranges 000005b0  00000000  00000000  0007f7d6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_macro  0000db74  00000000  00000000  0007fd86  2**0
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+08000000 l    d  .text	00000000 .text
+20000000 l    d  .stack	00000000 .stack
+20000200 l    d  .data	00000000 .data
+2000020c l    d  .bss	00000000 .bss
+2001c000 l    d  .aux	00000000 .aux
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_macro	00000000 .debug_macro
+00000000 l    df *ABS*	00000000 vectors.c
+080004ac l     F .text	0000000e __Default_Handler
+00000000 l    df *ABS*	00000000 crtstuff.c
+0800175c l     O .text	00000000 __EH_FRAME_BEGIN__
+08000188 l     F .text	00000000 __do_global_dtors_aux
+2000020c l       .bss	00000000 completed.8111
+08001778 l     O .text	00000000 __do_global_dtors_aux_fini_array_entry
+080001ac l     F .text	00000000 frame_dummy
+20000210 l       .bss	00000000 object.8116
+08001768 l     O .text	00000000 __frame_dummy_init_array_entry
+00000000 l    df *ABS*	00000000 obj/startup.o
+00000000 l    df *ABS*	00000000 core_init.c
+00000000 l    df *ABS*	00000000 gpio_f4.c
+00000000 l    df *ABS*	00000000 hardfault.c
+080003ec l     F .text	00000028 NVIC_SystemReset
+08000424 l       .text	00000000 _MSP
+00000000 l    df *ABS*	00000000 usart.c
+080004bc l     F .text	00000030 NVIC_EnableIRQ
+20000228 l     O .bss	00000010 usart_struct
+00000000 l    df *ABS*	00000000 heap_4.c
+20000238 l     O .bss	00001000 ucHeap
+20001238 l     O .bss	00000008 xStart
+20001240 l     O .bss	00000004 pxEnd
+20000200 l     O .data	00000004 xFreeBytesRemaining
+20001244 l     O .bss	00000004 xBlockAllocatedBit
+080007a0 l     F .text	0000009c prvHeapInit
+0800083c l     F .text	000000b0 prvInsertBlockIntoFreeList
+00000000 l    df *ABS*	00000000 hooks.c
+00000000 l    df *ABS*	00000000 list.c
+00000000 l    df *ABS*	00000000 port.c
+20000204 l     O .data	00000004 uxCriticalNesting
+20001248 l     O .bss	00000001 ucMaxSysCallPriority
+2000124c l     O .bss	00000004 ulMaxPRIGROUPValue
+08000a78 l       .text	00000000 pxCurrentTCBConst2
+08000a7c l     F .text	00000010 prvPortStartFirstTask
+08000c00 l       .text	00000000 pxCurrentTCBConst
+00000000 l    df *ABS*	00000000 tasks.c
+20001254 l     O .bss	000000c8 pxReadyTasksLists
+2000131c l     O .bss	00000014 xDelayedTaskList1
+20001330 l     O .bss	00000014 xDelayedTaskList2
+20001344 l     O .bss	00000004 pxDelayedTaskList
+20001348 l     O .bss	00000004 pxOverflowDelayedTaskList
+2000134c l     O .bss	00000014 xPendingReadyList
+20001360 l     O .bss	00000014 xTasksWaitingTermination
+20001374 l     O .bss	00000004 uxTasksDeleted
+20001378 l     O .bss	00000014 xSuspendedTaskList
+2000138c l     O .bss	00000004 uxCurrentNumberOfTasks
+20001390 l     O .bss	00000004 xTickCount
+20001394 l     O .bss	00000004 uxTopReadyPriority
+20001398 l     O .bss	00000004 xSchedulerRunning
+2000139c l     O .bss	00000004 uxSchedulerSuspended
+200013a0 l     O .bss	00000004 uxPendedTicks
+200013a4 l     O .bss	00000004 xYieldPending
+200013a8 l     O .bss	00000004 xNumOfOverflows
+200013ac l     O .bss	00000004 uxTaskNumber
+20000208 l     O .data	00000004 xNextTaskUnblockTime
+08001354 l     F .text	00000064 prvAllocateTCBAndStack
+080011d4 l     F .text	00000090 prvInitialiseTCBVariables
+08001264 l     F .text	0000007c prvInitialiseTaskLists
+080011c0 l     F .text	00000012 prvIdleTask
+08001744 l     O .text	00000014 ucExpectedStackBytes.4893
+080012e0 l     F .text	00000074 prvCheckTasksWaitingTermination
+080013b8 l     F .text	0000001e prvDeleteTCB
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 memcmp.c
+00000000 l    df *ABS*	00000000 memset.c
+00000000 l    df *ABS*	00000000 c:/dev/arm/toolchains/gcc-arm-none-eabi-4_9-141220/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+00000000 l    df *ABS*	00000000 c:/dev/arm/toolchains/gcc-arm-none-eabi-4_9-141220/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+00000000 l    df *ABS*	00000000 c:/dev/arm/toolchains/gcc-arm-none-eabi-4_9-141220/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+00000000 l    df *ABS*	00000000 i2c_master.c
+00000000 l    df *ABS*	00000000 hmc5883l.c
+00000000 l    df *ABS*	00000000 malloc_lock.c
+00000000 l    df *ABS*	00000000 syscalls.c
+00000000 l    df *ABS*	00000000 croutine.c
+00000000 l    df *ABS*	00000000 queue.c
+00000000 l    df *ABS*	00000000 rtos_timers.c
+00000000 l    df *ABS*	00000000 exit.c
+00000000 l    df *ABS*	00000000 impure.c
+00000000 l    df *ABS*	00000000 init.c
+00000000 l    df *ABS*	00000000 lib_a-memcpy.o
+00000000 l    df *ABS*	00000000 reent.c
+00000000 l    df *ABS*	00000000 __call_atexit.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 
+00000000 l       *UND*	00000000 readRegister8
+00010000 l       *ABS*	00000000 __ccm_ram_size
+0800177c l       .stack	00000000 __exidx_end
+00000000 l       *UND*	00000000 __bss_start__
+40024000 l       .text	00000000 __bkp_ram_start
+0800177c l       .stack	00000000 __exidx_start
+08080000 l       *ABS*	00000000 __rom_end
+00000000 l       *UND*	00000000 __libc_fini_array
+00000000 l       *UND*	00000000 __sf_fake_stderr
+2001c000 l       *ABS*	00000000 _eram
+00000000 l       *UND*	00000000 __bss_end__
+40025000 l       *ABS*	00000000 __bkp_ram_end
+00000000 l       *ABS*	00000000 __process_stack_size
+00000000 l       *UND*	00000000 writeRegister8
+00080000 l       *ABS*	00000000 __rom_size
+00000000 l       *UND*	00000000 software_init_hook
+00001000 l       *ABS*	00000000 __bkp_ram_size
+00000000 l       *UND*	00000000 __sf_fake_stdin
+0800176c l       .text	00000000 __init_array_end
+00000000 l       *UND*	00000000 hardware_init_hook
+2001c000 l       *ABS*	00000000 __heap_end
+0001c000 l       *ABS*	00000000 __ram_size
+00000000 l       *UND*	00000000 atexit
+00004000 l       *ABS*	00000000 __aux_ram_size
+08001768 l       .text	00000000 __preinit_array_end
+200013b0 l       .bss	00000000 __heap_start
+00000000 l       *UND*	00000000 __stack
+08000000 l       .text	00000000 __rom_start
+00000000 l       *UND*	00000000 __sf_fake_stdout
+00000200 l       *ABS*	00000000 __main_stack_size
+08001768 l       .text	00000000 __init_array_start
+08001768 l       .text	00000000 __preinit_array_start
+080004ac  w    F .text	0000000e RTC_Alarm_IRQHandler
+080004ac  w    F .text	0000000e HASH_RNG_IRQHandler
+080004ac  w    F .text	0000000e EXTI2_IRQHandler
+20000000 g       .text	00000000 __ram_start
+080004ac  w    F .text	0000000e TIM8_CC_IRQHandler
+080004ac  w    F .text	0000000e DebugMon_Handler
+08000788 g     F .text	00000018 xPortGetFreeHeapSize
+08000b88 g     F .text	00000024 vPortExitCritical
+2001c000 g       *ABS*	00000000 __ram_end
+080004ac  w    F .text	0000000e TIM1_CC_IRQHandler
+080004ac  w    F .text	0000000e DMA2_Stream5_IRQHandler
+08000414 g     F .text	00000018 HardFault_Handler
+08000bac g     F .text	00000012 ulPortSetInterruptMask
+080004ac  w    F .text	0000000e DMA1_Stream5_IRQHandler
+08000c04 g     F .text	00000028 SysTick_Handler
+08000236 g     F .text	00000000 __default_low_level_init
+080004ac  w    F .text	0000000e PVD_IRQHandler
+080004ac  w    F .text	0000000e SDIO_IRQHandler
+080004ac  w    F .text	0000000e TAMP_STAMP_IRQHandler
+080004ac  w    F .text	0000000e __Reserved_0x1C_Handler
+08000bc8 g     F .text	0000003c PendSV_Handler
+080004ac  w    F .text	0000000e NMI_Handler
+080004ac  w    F .text	0000000e CAN2_RX1_IRQHandler
+080004ac  w    F .text	0000000e EXTI3_IRQHandler
+20001250 g     O .bss	00000004 pxCurrentTCB
+080004ac  w    F .text	0000000e TIM8_TRG_COM_TIM14_IRQHandler
+080004ac  w    F .text	0000000e TIM1_UP_TIM10_IRQHandler
+08000000 g       .text	00000000 __text_start
+080004ac  w    F .text	0000000e TIM8_UP_TIM13_IRQHandler
+080004ac  w    F .text	0000000e I2C3_ER_IRQHandler
+08000a90 g     F .text	000000b8 xPortStartScheduler
+20000200 g       .stack	00000000 __process_stack_end
+080002f4 g     F .text	00000040 gpio_mode_config
+08000c50 g     F .text	00000160 xTaskGenericCreate
+08000c2c  w    F .text	00000024 vPortSetupTimerInterrupt
+080004ac  w    F .text	0000000e __Reserved_0x20_Handler
+080004ac  w    F .text	0000000e EXTI0_IRQHandler
+080004ac  w    F .text	0000000e I2C2_EV_IRQHandler
+080004ac  w    F .text	0000000e DMA1_Stream2_IRQHandler
+080004ac  w    F .text	0000000e CAN1_RX0_IRQHandler
+080006f4 g     F .text	00000094 vPortFree
+0800177c g       .text	00000000 __fini_array_end
+080004ac  w    F .text	0000000e FPU_IRQHandler
+080004ac  w    F .text	0000000e OTG_HS_WKUP_IRQHandler
+20000200 g       .stack	00000000 __process_stack_start
+08001480 g     F .text	000000cc spi_init
+080004ac  w    F .text	0000000e UsageFault_Handler
+0800096c g     F .text	00000046 vListInsertEnd
+080004ac  w    F .text	0000000e CAN2_SCE_IRQHandler
+080004ac  w    F .text	0000000e DMA2_Stream2_IRQHandler
+080004ac  w    F .text	0000000e SPI1_IRQHandler
+0800177c g       *ABS*	00000000 __data_init_start
+080004ac  w    F .text	0000000e TIM6_DAC_IRQHandler
+08000954 g     F .text	00000018 vListInitialiseItem
+080004ac  w    F .text	0000000e TIM1_BRK_TIM9_IRQHandler
+080004ac  w    F .text	0000000e DCMI_IRQHandler
+080004ac  w    F .text	0000000e CAN2_RX0_IRQHandler
+08000bc0 g     F .text	00000006 vPortClearInterruptMask
+08001444 g     F .text	0000003c LCD_Write_DATA
+080004ac  w    F .text	0000000e DMA2_Stream3_IRQHandler
+20000200 g       .stack	00000000 __main_stack_end
+200013b0 g       .bss	00000000 __bss_end
+0800042c g     F .text	00000080 HardFault_HandlerC
+080005d8 g     F .text	0000011c pvPortMalloc
+080004ac  w    F .text	0000000e USART6_IRQHandler
+0800175c g     F .text	00000000 _init
+08000914 g     F .text	0000003e vListInitialise
+10000000 g       .text	00000000 __ccm_ram_start
+080004ac  w    F .text	0000000e USART3_IRQHandler
+080004ac  w    F .text	0000000e CRYP_IRQHandler
+080001e4 g     F .text	00000000 Reset_Handler
+080004ac  w    F .text	0000000e CAN1_RX1_IRQHandler
+20000000 g       .stack	00000000 __stack_start
+080004ac  w    F .text	0000000e UART5_IRQHandler
+080004ac  w    F .text	0000000e DMA2_Stream0_IRQHandler
+080008ec g     F .text	00000006 vApplicationMallocFailedHook
+080004ac  w    F .text	0000000e TIM4_IRQHandler
+08000374 g     F .text	00000076 gpio_af_config
+00000000  w      *UND*	00000000 __deregister_frame_info
+080004ac  w    F .text	0000000e __Reserved_0x34_Handler
+080004ac  w    F .text	0000000e I2C1_EV_IRQHandler
+080004ac  w    F .text	0000000e DMA1_Stream6_IRQHandler
+080004ac  w    F .text	0000000e DMA1_Stream1_IRQHandler
+080004ac  w    F .text	0000000e UART4_IRQHandler
+080004ac  w    F .text	0000000e TIM3_IRQHandler
+080004ac  w    F .text	0000000e RCC_IRQHandler
+08000334 g     F .text	00000040 gpio_speed_config
+080004ac  w    F .text	0000000e TIM8_BRK_TIM12_IRQHandler
+080013d8 g     F .text	00000038 LCD_WriteByte
+08000e14 g     F .text	0000001c vTaskSuspendAll
+080009b4 g     F .text	00000054 uxListRemove
+080004ac  w    F .text	0000000e EXTI15_10_IRQHandler
+08000236  w    F .text	00000000 low_level_init_1
+080004ac  w    F .text	0000000e ADC_IRQHandler
+2000020c g       .data	00000000 __data_end
+080010d4 g     F .text	000000ec vTaskSwitchContext
+080004ac  w    F .text	0000000e DMA1_Stream7_IRQHandler
+080004ac  w    F .text	0000000e TIM7_IRQHandler
+080004ac  w    F .text	0000000e CAN2_TX_IRQHandler
+080004ac  w    F .text	0000000e TIM5_IRQHandler
+0800163c g     F .text	00000062 memcmp
+080004ac  w    F .text	0000000e DMA2_Stream7_IRQHandler
+080004ac  w    F .text	0000000e I2C3_EV_IRQHandler
+080004ac  w    F .text	0000000e __Reserved_0x28_Handler
+080008f4 g     F .text	0000000c vApplicationStackOverflowHook
+080004ac  w    F .text	0000000e EXTI9_5_IRQHandler
+20000200 g       .stack	00000000 __stack_end
+080004ac  w    F .text	0000000e RTC_WKUP_IRQHandler
+0800177c g       .text	00000000 __text_end
+080004ac  w    F .text	0000000e ETH_WKUP_IRQHandler
+08000b48 g     F .text	00000020 vPortYield
+08001778 g       .text	00000000 __fini_array_start
+080004ac  w    F .text	0000000e SPI2_IRQHandler
+080004ec g     F .text	0000006c usart_init
+2000020c g       .bss	00000000 __bss_start
+080004ac  w    F .text	0000000e OTG_HS_EP1_IN_IRQHandler
+080016a0 g     F .text	0000009a memset
+080004ac  w    F .text	0000000e MemManage_Handler
+08001600 g     F .text	0000003c main
+080004ac  w    F .text	0000000e DMA1_Stream0_IRQHandler
+08000268 g     F .text	0000008c core_init
+080004ac  w    F .text	0000000e __Reserved_0x24_Handler
+10010000 g       *ABS*	00000000 __ccm_ram_end
+080004ac  w    F .text	0000000e CAN1_TX_IRQHandler
+08000a5c g     F .text	00000020 SVC_Handler
+20000000 g       .stack	00000000 __main_stack_start
+080004ac  w    F .text	0000000e EXTI4_IRQHandler
+0800176c g     F .text	00000000 _fini
+08000e30 g     F .text	00000118 xTaskResumeAll
+08000db0 g     F .text	00000064 vTaskStartScheduler
+080004ac  w    F .text	0000000e FSMC_IRQHandler
+080004ac  w    F .text	0000000e ETH_IRQHandler
+080004ac  w    F .text	0000000e OTG_HS_EP1_OUT_IRQHandler
+080004ac  w    F .text	0000000e WWDG_IRQHandler
+080004ac  w    F .text	0000000e TIM2_IRQHandler
+080004ac  w    F .text	0000000e OTG_FS_WKUP_IRQHandler
+08000f48 g     F .text	0000018c xTaskIncrementTick
+080004ac  w    F .text	0000000e TIM1_TRG_COM_TIM11_IRQHandler
+080004ac  w    F .text	0000000e OTG_HS_IRQHandler
+080004ac  w    F .text	0000000e EXTI1_IRQHandler
+08000558 g     F .text	00000080 USART2_IRQHandler
+08000236  w    F .text	00000000 low_level_init_0
+2001c000 g       .text	00000000 __aux_ram_start
+080004ac  w    F .text	0000000e I2C2_ER_IRQHandler
+080004ac  w    F .text	0000000e DMA2_Stream1_IRQHandler
+080004ac  w    F .text	0000000e CAN1_SCE_IRQHandler
+20020000 g       *ABS*	00000000 __aux_ram_end
+080004ac  w    F .text	0000000e FLASH_IRQHandler
+080004ac  w    F .text	0000000e DMA2_Stream4_IRQHandler
+08000000 g     O .text	00000188 vectors
+080004ac  w    F .text	0000000e BusFault_Handler
+080004ac  w    F .text	0000000e USART1_IRQHandler
+08000a08 g     F .text	00000052 pxPortInitialiseStack
+080004ac  w    F .text	0000000e OTG_FS_IRQHandler
+080004ac  w    F .text	0000000e SPI3_IRQHandler
+0800154c g     F .text	000000b2 lcd_task
+080004ac  w    F .text	0000000e DMA1_Stream4_IRQHandler
+080004ac  w    F .text	0000000e I2C1_ER_IRQHandler
+08000b68 g     F .text	00000020 vPortEnterCritical
+20000200 g       .data	00000000 __data_start
+00000000  w      *UND*	00000000 _Jv_RegisterClasses
+00000000  w      *UND*	00000000 __register_frame_info
+080004ac  w    F .text	0000000e DMA2_Stream6_IRQHandler
+2001c000 g       .aux	00000000 __aux_start
+2001c000 g       .aux	00000000 __aux_end
+08001410 g     F .text	00000034 LCD_Write_COM
+080004ac  w    F .text	0000000e DMA1_Stream3_IRQHandler
+08000900 g     F .text	00000014 vApplicationIdleHook
+
+

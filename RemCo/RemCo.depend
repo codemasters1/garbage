@@ -1,0 +1,99 @@
+# depslib dependency file v1.0
+1404120299 source:d:\sources\c\rc\remco\client.c
+	<string.h>
+	<stdio.h>
+	<unistd.h>
+	<winsock2.h>
+	<stdint.h>
+
+1404207793 source:d:\sources\c\rc\remco\main.c
+	<string.h>
+	<stdio.h>
+	<stdint.h>
+	<stdbool.h>
+	<winsock2.h>
+	"common.h"
+	"cmd.h"
+
+1404123087 source:d:\sources\c\rc\remco\helpers.c
+	<stdio.h>
+	<windows.h>
+	<wininet.h>
+	"png/lodepng.h"
+
+1392223397 d:\sources\c\rc\remco\png\lodepng.h
+	<string.h>
+	<vector>
+	<string>
+	"lodepng.h"
+	<iostream>
+	"lodepng.h"
+
+1392223306 source:d:\sources\c\rc\remco\png\lodepng.c
+	"lodepng.h"
+	<stdio.h>
+	<stdlib.h>
+	<fstream>
+
+1404203177 source:d:\sources\c\rc\remco\cmd.c
+	"common.h"
+	"config.h"
+	"helpers.h"
+
+1393880469 d:\sources\c\rc\remco\config.h
+
+1404155412 d:\sources\c\rc\remco\helpers.h
+	<windows.h>
+
+1404162619 d:\sources\c\rc\remco\common.h
+	<stdint.h>
+
+1404161532 d:\sources\c\rc\remco\cmd.h
+	"common.h"
+
+1406190633 source:d:\sources\c\remco\cmd.c
+	"common.h"
+	"config.h"
+	"helpers.h"
+
+1406191871 d:\sources\c\remco\common.h
+	<stdint.h>
+
+1393880469 d:\sources\c\remco\config.h
+
+1404155412 d:\sources\c\remco\helpers.h
+	<windows.h>
+
+1406220395 source:d:\sources\c\remco\helpers.c
+	<stdio.h>
+	<stdint.h>
+	<windows.h>
+	<wininet.h>
+	"png/lodepng.h"
+
+1392223397 d:\sources\c\remco\png\lodepng.h
+	<string.h>
+	<vector>
+	<string>
+	"lodepng.h"
+	<iostream>
+	"lodepng.h"
+
+1406221597 source:d:\sources\c\remco\main.c
+	<string.h>
+	<stdio.h>
+	<stdint.h>
+	<stdbool.h>
+	<winsock2.h>
+	"common.h"
+	"cmd.h"
+
+1404161532 d:\sources\c\remco\cmd.h
+	"common.h"
+
+1392223306 source:d:\sources\c\remco\png\lodepng.c
+	"lodepng.h"
+	<stdio.h>
+	<stdlib.h>
+	<fstream>
+

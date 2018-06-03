@@ -1,0 +1,21 @@
+string = "\'";
+
+function printNumber(number, base)
+{
+	ns = "";
+	
+	if (number == 0)
+	{
+		ns = "0";
+	}
+	else
+	{
+		while(number > 0)
+		{
+			ns = (number % base) + ns;
+			number = number / base;
+		}
+	}
+	
+	print(ns + "/n");
+}

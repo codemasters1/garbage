@@ -1,0 +1,14 @@
+module divider(
+	input clk_in,
+	output clk_out
+);
+
+reg [15:0] counter;
+assign clk_out[15];
+
+always @(posedge clk_in)
+begin
+	counter <= counter + 1;
+end
+
+endmodule

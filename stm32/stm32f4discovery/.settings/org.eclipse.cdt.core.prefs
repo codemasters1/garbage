@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1529017242/CWD/delimiter=;
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1529017242/CWD/operation=replace
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1529017242/CWD/value=C\:\\DEV\\arm\\projects\\stm32f4discovery
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1529017242/PATH/delimiter=;
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1529017242/PATH/operation=replace
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1529017242/PATH/value=C\:\\DEV\\arm\\toolchain\\gcc-arm-none-eabi-4_8-131228\\bin;C\:\\DEV\\coreutils
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1529017242/append=true
+environment/project/ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1529017242/appendContributed=true

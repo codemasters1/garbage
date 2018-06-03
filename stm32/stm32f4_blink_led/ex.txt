@@ -1,0 +1,104 @@
+
+int itoa(int value, char *sp, int radix)
+{
+    char tmp[16];// be careful with the length of the buffer
+    char *tp = tmp;
+    int i;
+    unsigned v;
+
+    int sign = (radix == 10 && value < 0);
+    if (sign)
+        v = -value;
+    else
+        v = (unsigned)value;
+
+    while (v || tp == tmp)
+    {
+        i = v % radix;
+        v /= radix; // v/=radix uses less CPU clocks than v=v/radix does
+        if (i < 10)
+          *tp++ = i+'0';
+        else
+          *tp++ = i + 'a' - 10;
+    }
+
+    int len = tp - tmp;
+
+    if (sign)
+    {
+        *sp++ = '-';
+        len++;
+    }
+
+    while (tp > tmp)
+        *sp++ = *--tp;
+
+    return len;
+}
+
+void LCD_Init(void)
+{
+	GPIO_ConfigPin(GPIOD, 8, GPIO_OUT_PP_50MHz); //DC
+	GPIO_ConfigPin(GPIOD, 9, GPIO_OUT_PP_50MHz); //RST
+
+	GPIO_ConfigPin(GPIOB, 12, GPIO_OUT_PP_50MHz);   // CS
+	GPIO_ConfigPin(GPIOB, 13, GPIO_AF5_PP_50MHz);   // SCK
+	GPIO_ConfigPin(GPIOB, 14, GPIO_AF5_PP_50MHz);   // MISO
+	GPIO_ConfigPin(GPIOB, 15, GPIO_AF5_PP_50MHz);   // MOSI
+
+	RCC->APB1ENR |= RCC_APB1ENR_SPI2EN;
+
+	SPI2->CR1 = SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR | SPI_CR1_SPE;
+
+}
+
+uint8_t LCD_WriteByte(uint8_t byte)
+{
+	SPI2->DR = byte;
+	while(SPI1->SR & SPI_SR_TXE);
+	return SPI1->DR;
+}
+
+void LCD_WriteCommand(uint8_t com)
+{
+	GPIOB->ODR &= ~(1 << 12); // CS
+	GPIOD->ODR &= ~(1 << 8);  // DC
+	LCD_WriteByte(com);
+}
+
+uint8_t LCD_WriteData(uint8_t data)
+{
+	uint8_t temp;
+	GPIOB->ODR &= ~(1 << 12); // CS
+	GPIOD->ODR |=  (1 << 8); // DC
+	temp = LCD_WriteByte(data);
+	return temp;
+}
+
+
+// -------------
+	/*gpio_pin_cfg(GPIOE, 9, GPIO_AF1_PP_100MHz);
+
+	RCC->APB2ENR |= RCC_APB2ENR_TIM1EN; // w³¹czenie zegara TIM1
+
+	TIM1->PSC = 8400 - 1; // 84M/8400=10k
+	TIM1->ARR = 100; // maks. wype³nienie
+	TIM1->CCMR1 = TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_1 | TIM_CCMR1_OC1PE; // mode 1
+	TIM1->BDTR 	|= TIM_BDTR_MOE;
+	TIM1->CCER  |= TIM_CCER_CC1E; // kana³ 1
+	TIM1->EGR 	|= TIM_EGR_UG;
+	TIM1->CR1   |= TIM_CR1_ARPE | TIM_CR1_CEN; // w³¹czenie timera
+
+	TIM1->CCR1 = 0;
+	// -------------
+*//*
+	while(1)
+ 	{
+		if (GPIOA->IDR & (1 << 0))
+		{
+			TIM1->CCR1++;
+			if (TIM1->CCR1 >= TIM1->ARR)
+				TIM1->CCR1 = 0;
+		}
+		delay_ms(100);
+ 	}*/

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8" />
+  	<title></title>
+  </head>
+  <body>
+   <input type="text" id="number1" />
+   <input type="text" id="number2" />
+   <input type="submit" id="calc" />
+   <div id="result"></div>
+   <script>
+     function findPeriod(a, b, maxNumbers) {
+       var integralPart = Math.floor(a / b);
+       a %= b;
+       var remainder = a;
+       var digits = [];
+       var pairs = [];
+
+       for (var i = 0; i < maxNumbers && remainder != 0; ++i) {
+         var d = Math.floor(remainder * 10 / b);
+
+         var item = remainder + ' ' + d;
+         var index = pairs.indexOf(item);
+         if (index != -1)
+          return integralPart + '.' + digits.slice(0, index).join('') + '(' + digits.slice(index).join('') + ')';
+
+         digits.push(d);
+         pairs.push(item);
+
+         remainder = remainder * 10 % b;
+       }
+
+       return integralPart + '.' + digits.join('');
+     }
+
+     document.getElementById('calc').onclick = function() {
+       var number1 = parseInt(document.getElementById('number1').value);
+       var number2 = parseInt(document.getElementById('number2').value);
+       document.getElementById('result').innerText = findPeriod(number1, number2, 100000);
+     }
+   </script>
+  </body>
+</html>

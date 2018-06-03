@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Skracanie linków</title>
+    </head>
+    <body>
+    {% if url %}
+        <pre>{{ url }}</pre>
+    {% else %}
+        <form action="/" method="post">
+            <input type="url" name="url" placeholder="Link do skrócenia">
+            <input type="submit" value="Skróć!">
+        </form>
+    {% endif %}
+    </body>
+</html>
